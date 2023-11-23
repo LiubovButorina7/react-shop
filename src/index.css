@@ -94,7 +94,7 @@ a {
 .more {
   cursor: pointer;
   position: absolute;
-  right: -5px;
+  right: -10px;
   bottom: 3%;
 }
 
@@ -102,11 +102,11 @@ a {
   overflow-x: hidden;
 }
 
-.reveal {
+.reveal-close {
   cursor: pointer;
   position: absolute;
   top: 0%;
-  right: 0%;
+  right: -5px;
 }
 
 .card .card-reveal .card-title {
