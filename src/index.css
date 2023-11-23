@@ -78,6 +78,7 @@ a {
   width: 100%;
   border-bottom: 1px solid #7fb7e7;
   margin-bottom: 1rem;
+  font-size: 20px;
 
   box-sizing: content-box;
 }
@@ -95,6 +96,10 @@ a {
   bottom: 3%;
 }
 
+.card-reveal {
+  overflow-x: hidden;
+}
+
 .reveal {
   cursor: pointer;
   position: absolute;
@@ -104,7 +109,6 @@ a {
 
 .card-description {
   text-align: justify;
-  /*overflow: scroll;*/
 }
 
 .card-price {
