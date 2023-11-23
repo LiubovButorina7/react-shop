@@ -212,7 +212,8 @@ a {
 
   box-sizing: content-box;
 
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .item-list {

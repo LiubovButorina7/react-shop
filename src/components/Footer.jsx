@@ -6,7 +6,7 @@ function Footer() {
           Portfolio Project by Liubov Butorina © {new Date().getFullYear()}{" "}
           Copyright
           <span className="right">
-            <a href="!#">Repo</a>
+            <a href="https://github.com/LiubovButorina7/react-shop">Repo</a>
           </span>
         </div>
       </div>
