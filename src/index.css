@@ -115,6 +115,7 @@ a {
 
 .card-description {
   text-align: justify;
+  font-size: 13px;
 }
 
 .card-price {
