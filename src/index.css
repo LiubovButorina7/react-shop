@@ -63,6 +63,7 @@ a {
   flex-direction: column;
   justify-content: left;
   align-items: flex-start;
+  font-size: 20px;
 }
 
 .card-image {
@@ -78,8 +79,6 @@ a {
   width: 100%;
   border-bottom: 1px solid #7fb7e7;
   margin-bottom: 1rem;
-  font-size: 20px;
-
   box-sizing: content-box;
 }
 
