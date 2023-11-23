@@ -22,7 +22,9 @@ function GoodsItem({ good, addToCart, order }) {
       <div className="card-reveal">
         <div className="card-title">
           <div className="card-name grey-text text-darken-4">{name}</div>
-          <i className="reveal material-icons right">close</i>
+          <i style={{ right: "-10px" }} className="reveal material-icons right">
+            close
+          </i>
         </div>
         <p className="card-description">{description}</p>
       </div>
