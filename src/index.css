@@ -109,6 +109,10 @@ a {
   right: 0%;
 }
 
+.card .card-reveal .card-title {
+  cursor: auto;
+}
+
 .card-description {
   text-align: justify;
 }
