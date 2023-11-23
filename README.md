@@ -20,6 +20,6 @@ Screenshorts:
 
 Links:
 
-- [DEMO] (https://liubovbutorina7.github.io/react-shop/)
+- [DEMO](https://liubovbutorina7.github.io/react-shop/)
 
 Author: Liubov Butorina

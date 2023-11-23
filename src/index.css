@@ -78,6 +78,8 @@ a {
   width: 100%;
   border-bottom: 1px solid #7fb7e7;
   margin-bottom: 1rem;
+
+  box-sizing: content-box;
 }
 
 .card-name {
@@ -102,7 +104,7 @@ a {
 
 .card-description {
   text-align: justify;
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 
 .card-price {
