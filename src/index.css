@@ -63,7 +63,6 @@ a {
   flex-direction: column;
   justify-content: left;
   align-items: flex-start;
-  font-size: 20px;
 }
 
 .card-image {
@@ -80,6 +79,10 @@ a {
   border-bottom: 1px solid #7fb7e7;
   margin-bottom: 1rem;
   box-sizing: content-box;
+}
+
+.card .card-title {
+  font-size: 20px;
 }
 
 .card-name {
