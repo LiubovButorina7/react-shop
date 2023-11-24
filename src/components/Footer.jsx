@@ -9,6 +9,7 @@ function Footer() {
             <a
               href="https://github.com/LiubovButorina7/react-shop"
               target="_blank"
+              rel="noreferrer"
             >
               Repo
             </a>
