@@ -1,5 +1,9 @@
 # React Shop Portfolio Project
 
+## Links:
+
+- [DEMO](https://liubovbutorina7.github.io/react-shop/)
+
 ## Built with:
 
 - React Create App
@@ -16,13 +20,15 @@
 ## Screenshorts:
 
 ![](./public/screenshots/shop1.png)
+
 ![](./public/screenshots/shop2.png)
+
 ![](./public/screenshots/shop3.png)
+
 ![](./public/screenshots/shop4.png)
+
 ![](./public/screenshots/shop5.png)
 
-## Links:
+## Author:
 
-- [DEMO](https://liubovbutorina7.github.io/react-shop/)
-
-## Author: _Liubov Butorina_
+_Liubov Butorina_
