@@ -6,6 +6,7 @@ function Header() {
           <a
             href="https://github.com/LiubovButorina7/react-shop"
             className="brand-logo left"
+            target="_blank"
           >
             React Shop
           </a>

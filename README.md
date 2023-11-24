@@ -1,6 +1,6 @@
-React Shop Portfolio Project
+# React Shop Portfolio Project
 
-Built with:
+## Built with:
 
 - React Create App
 - Fake Store API
@@ -8,18 +8,19 @@ Built with:
 - CSS custom properties
 - Flexbox
 
-Useful resources:
+## Resources:
 
 - [Fake Store API](https://fakestoreapi.com/)
 - [React Select API](https://react-select.com/)
 
-Screenshorts:
+## Screenshorts:
+
 ![]()
 ![]()
 ![]()
 
-Links:
+## Links:
 
 - [DEMO](https://liubovbutorina7.github.io/react-shop/)
 
-Author: Liubov Butorina
+## Author: Liubov Butorina
