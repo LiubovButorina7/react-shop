@@ -59,12 +59,10 @@ function CartItem({ orderItem }) {
             }}
             onChange={(e) => {
               if (e.target.value > 0 && e.target.value < 1000) {
-                //inputValue(Number(e.target.value), id);
                 dispatch({
                   type: "inputValue",
                   payload: { value: Number(e.target.value), id },
                 });
-                //inputValue(Number(e.target.value), id);
               }
             }}
           />
