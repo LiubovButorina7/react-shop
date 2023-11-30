@@ -1,32 +1,30 @@
-import Select from "react-select";
 import { useEffect, useReducer } from "react";
+import { ShopContext, ShopDispatchContext } from "../Context";
+import { ShopReducer } from "../ShopReducer";
+
 import { Preloader } from "./Preloader";
+import { SelectComp } from "./Select";
 import { GoodsList } from "./GoodsList";
 import { Cart } from "./Cart";
 import { CartList } from "./CartList";
 import { Alert } from "./Alert";
-
-import { ShopContext, ShopDispatchContext } from "../Context";
-import { ShopReducer } from "../ShopReducer";
 
 const getOrderStorage = () => {
   const orderJSON = window.localStorage.getItem("order");
   return JSON.parse(orderJSON);
 };
 
+const initialShopState = {
+  goods: [],
+  options: [{ value: "", label: "All" }],
+  isLoading: true,
+  order: getOrderStorage() || [],
+  selectedCategory: null,
+  isCartShown: false,
+  alertName: "",
+};
+
 function Shop() {
-  const initialOrders = getOrderStorage();
-
-  const initialShopState = {
-    goods: [],
-    options: [{ value: "", label: "All" }],
-    isLoading: true,
-    order: initialOrders || [],
-    selectedCategory: null,
-    isCartShown: false,
-    alertName: "",
-  };
-
   const [shopState, dispatch] = useReducer(ShopReducer, initialShopState);
 
   const getGoods = () => {
@@ -64,28 +62,6 @@ function Shop() {
     window.localStorage.setItem("order", JSON.stringify([...newOrder]));
   };
 
-  const changeSelectedCategory = (value) => {
-    let url;
-    dispatch({ type: "selectCategory", payload: value });
-
-    if (value) {
-      url = `https://fakestoreapi.com/products/category/${value}`;
-    } else {
-      url = `https://fakestoreapi.com/products`;
-    }
-    fetch(url)
-      .then((res) => res.json())
-      .then((json) =>
-        dispatch({
-          type: "setGoods",
-          payload: json,
-        })
-      )
-      .catch((error) => {
-        alert(error);
-      });
-  };
-
   useEffect(() => {
     getCategories();
     getGoods();
@@ -100,14 +76,7 @@ function Shop() {
     <ShopContext.Provider value={shopState}>
       <ShopDispatchContext.Provider value={dispatch}>
         <main className="container content">
-          <Select
-            className="select"
-            styles={{ marginBottom: "50px" }}
-            placeholder="Choose a category"
-            defaultValue={shopState.selectedCategory}
-            options={shopState.options}
-            onChange={(e) => changeSelectedCategory(e.value)}
-          />
+          <SelectComp />
           <Cart />
           {shopState.isLoading ? <Preloader /> : <GoodsList />}
           {shopState.isCartShown && <CartList />}

@@ -1,12 +1,11 @@
 # React Shop Portfolio Project
 
-## Links:
-
 - [DEMO](https://liubovbutorina7.github.io/react-shop/)
 
 ## Built with:
 
 - React Create App
+- React Hooks (useEffect, useReducer, useContext)
 - Fake Store API
 - React Select API
 - CSS custom properties

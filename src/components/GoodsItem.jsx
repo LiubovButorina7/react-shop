@@ -5,9 +5,9 @@ function GoodsItem({ good }) {
   const { id, title: name, price, description, image } = good;
 
   const { order } = useContext(ShopContext);
+  const dispatch = useContext(ShopDispatchContext);
 
   const index = order.findIndex((item) => item.id === id);
-  const dispatch = useContext(ShopDispatchContext);
 
   return (
     <div className="card card-panel hoverable" id={id}>
