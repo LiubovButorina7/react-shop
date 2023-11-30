@@ -12,7 +12,7 @@ function CartList() {
   );
 
   return (
-    <div className="cart-list z-depth-5">
+    <div className="cart-list">
       <div className="list-header">
         <b className="cart-title">Shopping Cart</b>
         {/* eslint-disable-next-line */}
