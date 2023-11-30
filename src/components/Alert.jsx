@@ -1,17 +1,21 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { ShopContext, ShopDispatchContext } from "../Context";
 
-function Alert({ name, closeAlert }) {
+function Alert() {
+  const { alertName } = useContext(ShopContext);
+  const dispatch = useContext(ShopDispatchContext);
+
   useEffect(() => {
-    const timerId = setTimeout(closeAlert, 2000);
+    const timerId = setTimeout(() => dispatch({ type: "closeAlert" }), 2000);
     return () => {
       clearTimeout(timerId);
     };
     // eslint-disable-next-line
-  }, [name]);
+  }, [alertName]);
 
   return (
     <div id="toast-container">
-      <div className="toast">{name} is added to Cart</div>
+      <div className="toast">{alertName} is added to Cart</div>
     </div>
   );
 }

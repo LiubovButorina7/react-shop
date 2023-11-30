@@ -1,7 +1,13 @@
-function GoodsItem({ good, addToCart, order }) {
+import { useContext } from "react";
+import { ShopContext, ShopDispatchContext } from "../Context";
+
+function GoodsItem({ good }) {
   const { id, title: name, price, description, image } = good;
 
+  const { order } = useContext(ShopContext);
+
   const index = order.findIndex((item) => item.id === id);
+  const dispatch = useContext(ShopDispatchContext);
 
   return (
     <div className="card card-panel hoverable" id={id}>
@@ -32,7 +38,16 @@ function GoodsItem({ good, addToCart, order }) {
         {/* eslint-disable-next-line */}
         <span
           className="right material-icons add-to-cart "
-          onClick={() => addToCart({ id, name, price, image })}
+          onClick={() => {
+            if (index >= 0 && order[index].quantity >= 999) {
+              alert("Item's quantity should be in range 1-999.");
+            } else {
+              dispatch({
+                type: "addToCart",
+                payload: { id, name, price, image },
+              });
+            }
+          }}
         >
           add_shopping_cart
         </span>

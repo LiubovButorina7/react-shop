@@ -1,5 +1,14 @@
-function Cart({ order, showCart }) {
-  const totalQuantity = order.reduce((sum, item) => sum + item.quantity, 0);
+import { useContext } from "react";
+import { ShopContext, ShopDispatchContext } from "../Context";
+
+function Cart() {
+  const shopState = useContext(ShopContext);
+  const dispatch = useContext(ShopDispatchContext);
+
+  const totalQuantity = shopState.order.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
 
   return (
     <div className="general-cart">
@@ -7,7 +16,7 @@ function Cart({ order, showCart }) {
       <i
         className="material-icons"
         style={{ fontSize: "3rem" }}
-        onClick={showCart}
+        onClick={() => dispatch({ type: "showCart" })}
       >
         shopping_cart
       </i>

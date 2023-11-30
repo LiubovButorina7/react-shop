@@ -8,6 +8,7 @@ function Footer() {
           <span className="right">
             <a
               href="https://github.com/LiubovButorina7/react-shop"
+              title="Go to Github.com"
               target="_blank"
               rel="noreferrer"
             >

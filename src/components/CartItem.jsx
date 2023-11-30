@@ -1,4 +1,9 @@
-function CartItem({ orderItem, removeFromCart, changeQuantity, inputValue }) {
+import { useContext } from "react";
+import { ShopDispatchContext } from "../Context";
+
+function CartItem({ orderItem }) {
+  const dispatch = useContext(ShopDispatchContext);
+
   const { id, name, price, quantity, image } = orderItem;
 
   return (
@@ -14,7 +19,12 @@ function CartItem({ orderItem, removeFromCart, changeQuantity, inputValue }) {
           // eslint-disable-next-line
           <span
             className="material-icons inc-dec"
-            onClick={() => changeQuantity(id, "dec")}
+            onClick={() =>
+              dispatch({
+                type: "changeQuantity",
+                payload: { id, direction: "dec" },
+              })
+            }
           >
             remove
           </span>
@@ -49,7 +59,12 @@ function CartItem({ orderItem, removeFromCart, changeQuantity, inputValue }) {
             }}
             onChange={(e) => {
               if (e.target.value > 0 && e.target.value < 1000) {
-                inputValue(Number(e.target.value), id);
+                //inputValue(Number(e.target.value), id);
+                dispatch({
+                  type: "inputValue",
+                  payload: { value: Number(e.target.value), id },
+                });
+                //inputValue(Number(e.target.value), id);
               }
             }}
           />
@@ -70,7 +85,12 @@ function CartItem({ orderItem, removeFromCart, changeQuantity, inputValue }) {
           // eslint-disable-next-line
           <span
             className="material-icons inc-dec"
-            onClick={() => changeQuantity(id, "inc")}
+            onClick={() =>
+              dispatch({
+                type: "changeQuantity",
+                payload: { id, direction: "inc" },
+              })
+            }
           >
             add
           </span>
@@ -83,7 +103,7 @@ function CartItem({ orderItem, removeFromCart, changeQuantity, inputValue }) {
         {/* eslint-disable-next-line */}
         <i
           className="material-icons cart-delete"
-          onClick={() => removeFromCart(id)}
+          onClick={() => dispatch({ type: "removeFromCart", payload: id })}
         >
           delete
         </i>

@@ -5,6 +5,7 @@ function Header() {
         <div className="nav-wrapper">
           <a
             href="https://github.com/LiubovButorina7/react-shop"
+            title="Go to Github.com"
             className="brand-logo left"
             target="_blank"
             rel="noreferrer"
