@@ -30,6 +30,14 @@
 
 ![](./public/screenshots/shop5.png)
 
+![](./public/screenshots/shop6.png)
+
+![](./public/screenshots/shop7.png)
+
+![](./public/screenshots/shop8.png)
+
+![](./public/screenshots/shop9.png)
+
 ## Author:
 
 _Liubov Butorina_
