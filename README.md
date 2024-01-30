@@ -7,6 +7,7 @@
 - React Create App
 - React Hooks (useEffect, useReducer, useContext)
 - Fake Store API
+- Materialize CSS
 - React Select API
 - CSS custom properties
 - Flexbox
@@ -14,6 +15,7 @@
 ## Resources:
 
 - [Fake Store API](https://fakestoreapi.com/)
+- [Materialize CSS](https://materializecss.com/)
 - [React Select API](https://react-select.com/)
 
 ## Screenshorts:
