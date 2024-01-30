@@ -18,6 +18,8 @@ main {
 
 header {
   width: 100%;
+  font-size: 2.5rem;
+  text-align: center;
 
   position: fixed;
   z-index: 30;
