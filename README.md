@@ -1,4 +1,4 @@
-# React Shop Portfolio Project
+# React Shop Project
 
 - [DEMO](https://liubovbutorina7.github.io/react-shop/)
 
